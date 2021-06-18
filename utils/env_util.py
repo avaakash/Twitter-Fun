@@ -1,8 +1,10 @@
 import json
 
+import settings
+
 def getEnv():
     environ_secrets = []
-    f = open("env.json")
+    f = open(settings.base("env.json"))
     env = json.load(f)
     f.close()
     
